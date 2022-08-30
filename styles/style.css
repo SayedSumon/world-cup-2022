@@ -82,22 +82,28 @@ header,main {
 .navbar{
     background-color: #161616;
     max-width: 250px;
-    height: 200px;
+    height: 250px;
     border-radius: 10px;
     padding: 2%;
     justify-content: center;
 }
 
-.navbar button{
+.navbar .nav_option{
     width: 180px;
-    height: 50px;
+    height:50px;
     margin-bottom: 20px;
     font-size: 18px;
     border-radius: 5px;
     background-color: #FFFFFF;
+    text-align: center;
+    padding-top: 20px;
+}
+.navbar .nav_option a{
+    text-decoration: none;
+    color: #161616;
 }
 
-.navbar :nth-child(3) button{
+.nav_option:hover{
     background-color: #DD0000;
     color: #FFFFFF;
 }
@@ -142,6 +148,17 @@ header,main {
     margin: 0;
 }
 
+.viewmore > button{
+    display: none;
+    background-color: #DD0000;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    text-align: center;
+    border: 0;
+}
+
 /*-----------------
  footer style start 
  -------------------*/
@@ -171,3 +188,56 @@ header,main {
     color: #b9b9b9;
     margin-right: 50px;
  }
+
+/* Media queries */
+/* mobile device */
+@media only screen and (max-width:576px){
+    
+    .container{
+        width:100%;
+    }
+    .banner, .main-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menubar ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .menubar ul li{
+        margin-bottom: 25px;
+    }
+    
+}
+/* tablet version */
+@media only screen and (min-width:577px) and (max-width:992px){
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar{
+        display: inline;
+    }
+
+    .blogs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .viewmore button{
+        display: inline;
+    }
+
+    .menubar ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .menubar ul li{
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,20 @@
+/* upcoming match css */
+.match{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.match_content{
+    width: 305px;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    padding: 50px 2px;
+    text-align: center;
+}
+
+.flag{
+    display: flex;
+    justify-content: space-evenly;
+}
